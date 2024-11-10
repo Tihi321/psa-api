@@ -1,6 +1,13 @@
 {
   "name": "psa-api",
   "version": "0.0.1",
+  "description": "Collection of logic for psa api connect",
+  "author": "Tihomir Selak <tknox.dr@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/Tihi321/psa-api#readme",
+  "bugs": {
+    "url": "https://github.com/Tihi321/psa-api/issues"
+  },
   "type": "module",
   "main": "./dist/index.js",
   "module": "./esm/index.js",
@@ -32,6 +39,5 @@
   },
   "dependencies": {
     "socket.io-client": "^4.8.1"
-  },
-  "license": "MIT"
+  }
 }
