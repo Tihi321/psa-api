@@ -1,0 +1,10 @@
+import { Socket } from 'socket.io-client';
+export declare const getSocket: () => Socket<import('@socket.io/component-emitter').DefaultEventsMap, import('@socket.io/component-emitter').DefaultEventsMap>;
+export declare const initializeSocket: (onConnect?: (message: string) => void) => void;
+export declare const send: (topic: string, value: any) => void;
+export declare const subscribe: (topic: string, Callback: (values?: any) => void) => void;
+export declare const once: (topic: string, Callback: (values?: any) => void) => void;
+export declare const sendMessage: (value: any) => void;
+export declare const subscribeMessage: (Callback: (values?: any) => void) => void;
+export declare const onceMessage: (Callback: (values?: any) => void) => void;
+export declare const sendAndReceive: (topic: string, value: any, Callback: (values?: any) => void) => Promise<unknown>;
