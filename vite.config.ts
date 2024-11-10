@@ -7,8 +7,7 @@ export default defineConfig({
     lib: {
       entry: "./src/index.ts",
       name: "psa-api",
-      fileName: (format) => `psa-api.${format}.js`,
-      formats: ["es", "cjs"],
+      fileName: () => "index.js",
     },
     rollupOptions: {
       external: ["socket.io-client"],
@@ -16,14 +15,14 @@ export default defineConfig({
         {
           format: "es",
           dir: "esm",
-          entryFileNames: "[name].js",
+          entryFileNames: "index.js",
           preserveModules: true,
           preserveModulesRoot: "src",
         },
         {
           format: "cjs",
           dir: "dist",
-          entryFileNames: "psa-api.cjs.js",
+          entryFileNames: "index.js",
           globals: {
             "socket.io-client": "io",
           },
